@@ -1,0 +1,12 @@
+{
+  "name": "react-native-lottie-rating",
+  "version": "0.0.2",
+  "main": "rating.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sonaye/react-native-lottie-rating.git"
+  },
+  "peerDependencies": {
+    "lottie-react-native": "^1.0.1"
+  }
+}
