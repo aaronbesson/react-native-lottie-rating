@@ -1,4 +1,5 @@
 # react-native-lottie-rating
+<img src="https://raw.githubusercontent.com/sonaye/react-native-lottie-rating/master/demo.gif" width="400">
 
 # Installation
 `yarn add react-native-lottie-rating`
