@@ -1,18 +1,16 @@
-// @flow
-
 import React, { Component } from 'react';
 import { LayoutAnimation, TouchableOpacity, View } from 'react-native';
 
 import Lottie from 'lottie-react-native';
 
 class Rating extends Component {
-  state = { rating: this.props.rating || 0 };
+  state = { rating: this.props.value || 0 };
 
   componentWillUpdate() {
     LayoutAnimation.linear();
   }
 
-  onRate(rating: number) {
+  onRate(rating) {
     this.setState({ rating });
     if (this.props.onRate) this.props.onRate(rating);
   }
@@ -24,12 +22,12 @@ class Rating extends Component {
     for (let i = 1; i <= max; i += 1) {
       icons.push(
         <TouchableOpacity
-          disabled={this.props.disabled || i === this.props.rating}
+          disabled={this.props.disabled || i === this.props.value}
           key={`stars-${new Date().getTime()}-${i}`}
           onPress={() => this.onRate(i)}>
           <Star
+            play={this.state.rating >= i}
             size={this.props.size || 36}
-            state={this.state.rating >= i ? 1 : 0}
             src={this.props.src || require('./animation.json')}
           />
         </TouchableOpacity>
@@ -37,21 +35,18 @@ class Rating extends Component {
     }
 
     return (
-      <View style={styles.row}>
+      <View style={{ flexDirection: 'row' }}>
         {icons}
       </View>
     );
   }
 }
 
-// eslint-disable-next-line
 class Star extends Component {
   componentDidMount() {
-    if (this.props.state === 1) this.animation.play();
-    if (this.props.state === 0) this.animation.reset();
+    if (this.props.play) this.animation.play();
+    else this.animation.reset();
   }
-
-  animation: any;
 
   render() {
     return (
@@ -61,16 +56,11 @@ class Star extends Component {
             this.animation = ref;
           }}
           source={this.props.src}
-          style={styles.full}
+          style={{ flex: 1 }}
         />
       </View>
     );
   }
 }
-
-const styles = {
-  full: { flex: 1 },
-  row: { flexDirection: 'row' }
-};
 
 export default Rating;
