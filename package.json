@@ -1,6 +1,7 @@
 {
   "name": "react-native-lottie-rating",
-  "version": "0.0.3",
+  "description": "A Lottie-based animated rating component for React Native.",
+  "version": "0.0.4",
   "main": "rating.js",
   "repository": {
     "type": "git",
