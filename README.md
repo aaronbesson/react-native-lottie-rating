@@ -6,16 +6,16 @@ The animation is also available [here](http://www.lottiefiles.com/138-star).
 # Installation
 `yarn add react-native-lottie-rating`
 
-# Usage
+# Definition
 ```javascript
-<Rating
-  disabled={false}                  // default = false
-  max={5}                           // default = 5
-  onRate={rating => null}
-  size={36}                         // default = 36
-  src={require('./animation.json')} // default = require('./animation.json')
-  value={0}                         // default = 0
-/>
+type rating = {
+  disabled?: boolean, // default = false
+  max?: number,       // default = 5
+  onRate: Function,   // default = rating => null
+  size?: number,      // default = 36
+  src?: any,          // default = require('./animation.json')
+  value?: number      // default = 0
+};
 ```
 
 ## Example
