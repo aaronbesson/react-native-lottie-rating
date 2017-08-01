@@ -4,7 +4,9 @@
 The animation is also available [here](http://www.lottiefiles.com/138-star).
 
 # Installation
-`yarn add react-native-lottie-rating`
+`yarn add lottie-react-native react-native-lottie-rating`
+
+`lottie-react-native` may require native linking, see package [repository](https://github.com/airbnb/lottie-react-native) for more details.
 
 # Definition
 ```javascript
