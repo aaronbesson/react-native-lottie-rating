@@ -34,11 +34,7 @@ class Rating extends Component {
       );
     }
 
-    return (
-      <View style={{ flexDirection: 'row' }}>
-        {icons}
-      </View>
-    );
+    return <View style={{ flexDirection: 'row' }}>{icons}</View>;
   }
 }
 
@@ -52,9 +48,8 @@ class Star extends Component {
     return (
       <View style={{ height: this.props.size, width: this.props.size }}>
         <Lottie
-          ref={ref => {
-            this.animation = ref;
-          }}
+          loop={false}
+          ref={ref => (this.animation = ref)}
           source={this.props.src}
           style={{ flex: 1 }}
         />
