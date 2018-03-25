@@ -1,4 +1,5 @@
 {
+  "license": "MIT",
   "name": "react-native-lottie-rating",
   "description": "A Lottie-based animated rating component for React Native.",
   "version": "0.0.11",
