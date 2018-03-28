@@ -1,4 +1,7 @@
 # react-native-lottie-rating
+
+[![npm version](https://badge.fury.io/js/react-native-lottie-rating.svg)](https://badge.fury.io/js/react-native-lottie-rating)
+
 <img src="https://raw.githubusercontent.com/sonaye/react-native-lottie-rating/master/demo.gif" width="400">
 
 The animation is also available [here](http://www.lottiefiles.com/138-star).
